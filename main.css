@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 32pxpx;
+}
+
+header {
+    padding: 8px 0;
+    background-color: rgb(16, 98, 192);
+    color: #ecf0f1;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+header nav li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/*-------------------------------------------------*/
+
+.conteudo {
+    padding-top: 38px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.destaque img {
+    max-width: 50%;
+    margin-right: 24px;
+}
+
+.destaque {
+    margin-bottom: 56px;
+    display: flex;
+}
+
+section h2 {
+    margin-bottom: 32px;
+    color: rgb(16, 98, 192);
+    font-size: 16px;
+    border-bottom: 1px solid;
+    font-style: italic;
+    padding-bottom: 8px;
+}
+
+.produto img {
+    max-width: 100%;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.produtos .produto a {
+    font-size: 1em;
+    
+}
+
+article button {
+    padding: 8px;
+    margin-top: 8px;
+    background-color: rgb(16, 98, 192);
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*-------------------------------------------------*/
+
+@media screen and (max-width: 640px) {
+    .conteudo {
+        display: flex;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .destaque img {
+        max-width: 100%;
+        margin-right: 8px;
+    }
+
+    .destaque {
+        display: block;
+    }
+
+    .produtos {
+        display: block;
+    }
+
+    .produtos .produto {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .conteudo .destaque {
+        display: block;
+    }
+
+    .destaque img {
+        max-width: 100%;
+        margin-right: 8px;
+        padding-bottom: 8px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
